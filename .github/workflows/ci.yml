@@ -32,8 +32,8 @@ jobs:
         JSONBIN_BIN_ID: ${{ secrets.JSONBIN_BIN_ID }}
       run: |
         # Заменяем плейсхолдеры на реальные значения из GitHub Secrets
-        sed -i "s/BOT_TOKEN = \".*\"/BOT_TOKEN = \"${BOT_TOKEN}\"/g" hoh.py
-        sed -i "s/CHANNEL_ID = \".*\"/CHANNEL_ID = \"${CHANNEL_ID}\"/g" hoh.py
+        sed -i "s/BOT_TOKEN = \".*\"/BOT_TOKEN = \"${BOT_TOKEN}\"/g" bot.py
+        sed -i "s/CHANNEL_ID = \".*\"/CHANNEL_ID = \"${CHANNEL_ID}\"/g" bot.py
         sed -i "s/JSONBIN_API_KEY = \"YOUR_JSONBIN_API_KEY\"/JSONBIN_API_KEY = \"${JSONBIN_API_KEY}\"/g" hoh.py
         sed -i "s/JSONBIN_BIN_ID = \"YOUR_JSONBIN_BIN_ID\"/JSONBIN_BIN_ID = \"${JSONBIN_BIN_ID}\"/g" bot.py
         python bot.py
